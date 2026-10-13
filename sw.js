@@ -1,4 +1,4 @@
-const CACHE = 'islamic-saathi-v1';
+const CACHE = 'islamic-saathi-v2';
 const CORE = [
   './',
   './index.html',
