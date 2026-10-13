@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Islamic Saathi">
+  <rect width="512" height="512" rx="118" fill="#0b5c50"/>
+  <circle cx="256" cy="158" r="42" fill="#f6d98d"/>
+  <path d="M256 200v36" stroke="#f6d98d" stroke-width="18" stroke-linecap="round"/>
+  <path d="M168 368c44-92 132-92 176 0" fill="none" stroke="#f6d98d" stroke-width="30" stroke-linecap="round"/>
+  <path d="M206 318c26-48 74-48 100 0" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity=".9"/>
+</svg>
