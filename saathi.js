@@ -119,9 +119,11 @@ function saveKhutbaDraft(id) {
 function editKhutbaDraft(id) {
   const d = saathiRead(SAATHI_DRAFTS, []).find((x) => x.id === id);
   if (!d) return;
-  if ($('#khutbaTitle')) $('#khutbaTitle').value = d.title || '';
-  if ($('#khutbaBody')) $('#khutbaBody').value = d.body || '';
-  $('#khutbaTitle')?.dataset.edit = id;
+  const titleEl = $('#khutbaTitle');
+  const bodyEl = $('#khutbaBody');
+  if (titleEl) titleEl.value = d.title || '';
+  if (bodyEl) bodyEl.value = d.body || '';
+  if (titleEl) titleEl.dataset.edit = id;
   toast('مسودہ ترمیم کے لیے کھل گیا');
 }
 
@@ -139,7 +141,7 @@ async function publishKhutba(draftId) {
   } else {
     title = ($('#khutbaTitle')?.value || '').trim();
     body = ($('#khutbaBody')?.value || '').trim();
-    const editId = $('#khutbaTitle')?.dataset.edit;
+    const editId = $('#khutbaTitle') && $('#khutbaTitle').dataset.edit;
     if (editId) saveKhutbaDraft(editId);
   }
   if (!title || !body) { toast('عنوان اور بیان دونوں لکھیں'); return; }
